@@ -28,30 +28,28 @@ Repositori diatur dengan struktur standar profesional sebagai berikut:
 └── README.md
 ```
 ## 🚀 Workflows & Automation Scripts
-1. **Data Cleaning & File Management** 
+A. **Data Cleaning & File Management** 
 Proses perapian data dilakukan secara terprogram untuk menghindari kesalahan manusia (human error) pada 15.000 file data:
 
 Bulk Renaming (01_rename_automation.py): Menggunakan library os dan regex (re) untuk mengurutkan nama ribuan file secara otomatis menjadi format berurutan (1.jpg, 2.jpg, dst) menggunakan teknik temporary rename agar nama file tidak saling bentrok.
 
 Audit File Hilang (02_missing_name.py): Script khusus untuk memindai seluruh direktori dan mendeteksi secara instan jika ada nomor urutan file gambar yang terlewat atau hilang dalam dataset.
 
-2. **XML Parsing & Synchronization Validation**
+B. **XML Parsing & Synchronization Validation**
 Metadata Extraction (03_total_summary.py): Memanfaatkan library xml.etree.ElementTree untuk mengekstrak isi tag objek di dalam file XML, mengubah huruf kapital yang tidak konsisten (misal: low, LOW, atau typo diseragamkan menjadi low), serta menghitung total kemunculan label.
 
 Sinkronisasi Pasangan Data: Script secara otomatis melakukan operasi himpunan (set operations) di Python untuk mencari file .jpg yang tidak memiliki pasangan .xml, atau sebaliknya, demi memastikan dataset 100% sinkron sebelum masuk ke tahap training model AI.
 
-3. **Exploratory Data Analysis & Spatial Mapping**
+C. **Exploratory Data Analysis & Spatial Mapping**
 Geospatial Analysis (04_map_v2.py): Menggunakan library tingkat lanjut geopandas untuk memetakan koordinat titik pengambilan data gambar berdasarkan shapefile wilayah administratif Indonesia, lalu memberikan visualisasi serta anotasi label nama kota secara dinamis.
 
 ## 📊 Key Results & Insights
 A. **Kategorisasi Anotasi Dataset**
 Seluruh objek dalam dataset 15.000 gambar berhasil divalidasi dan dikelompokkan secara konsisten ke dalam 3 kelas intensitas:
 
-Low: Menunjukkan tingkat kepadatan/objek rendah.
-
-Medium: Menunjukkan tingkat kepadatan/objek sedang.
-
-High: Menunjukkan tingkat kepadatan/objek tinggi.
+- Low: Menunjukkan tingkat kepadatan/objek rendah.
+- Medium: Menunjukkan tingkat kepadatan/objek sedang.
+- High: Menunjukkan tingkat kepadatan/objek tinggi.
 
 B. **Analisis Sebaran Spasial (Peta Wilayah)**
 Berdasarkan eksekusi script 04_map_v2.py yang menghasilkan output peta Map_v2.png, diperoleh temuan penting:
@@ -60,7 +58,7 @@ Distribusi data gambar tidak berpusat pada satu lokasi saja, melainkan tersebar 
 
 Tingkat kepadatan label (High/Medium/Low) sangat berkorelasi dengan faktor lingkungan geografis daerah setempat. Area perkotaan padat didominasi kelas High, sedangkan wilayah luar kota didominasi kelas Low.
 
-##💡 Key Deliverables & Impact
+## 💡 Key Deliverables & Impact
 Model-Ready Dataset Pipeline: Menghasilkan alur kode otomatisasi yang mampu menyaring ribuan data berantakan menjadi dataset bersih yang siap dimasukkan ke algoritma Object Detection (seperti YOLO atau Faster R-CNN).
 
 Data Presentation & Reporting: Menyediakan dokumen laporan profesional (presentation/) yang menerjemahkan angka-angka coding mentah menjadi bentuk insight visual grafis yang mudah dipahami oleh dosen, peneliti, maupun penguji proyek.
