@@ -17,13 +17,12 @@ Tantangan utama dalam proyek ini adalah menyatukan output dari banyak kontributo
 Repositori diatur dengan struktur standar profesional sebagai berikut:
 ```text
 ├── scripts/
-│   ├── 01_rename_automation.py  # Script otomatisasi penamaan file gambar (bulk rename)
-│   ├── 02_missing_name.py       # Script melacak nomor file yang hilang/rusak
-│   ├── 03_total_summary.py      # Script parsing XML, hitung label, & validasi sinkronisasi
-│   └── 04_map_v2.py             # Script analitik spasial & peta penyebaran data
+│   ├── rename_automation.py  # Script otomatisasi penamaan file gambar (bulk rename)
+│   ├── missing_name.py       # Script melacak nomor file yang hilang/rusak
+│   ├── total_summary.py      # Script parsing XML, hitung label, & validasi sinkronisasi
+│   └── map_v2.py             # Script analitik spasial & peta penyebaran data
 ├── presentation/
-│   ├── Laporan ke-4.pptx        # File presentasi/laporan akhir proyek (Format PowerPoint)
-│   └── Laporan ke-4.pdf         # File presentasi siap baca langsung di browser
+│   ├── Presentation.pdf        # File presentasi siap baca langsung di browser
 ├── output/
 │   └── Map_v2.png               # Hasil akhir visualisasi peta penyebaran data spasial
 └── README.md
