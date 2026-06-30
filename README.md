@@ -27,7 +27,7 @@ Repositori diatur dengan struktur standar profesional sebagai berikut:
 │   └── Map_v2.png               # Hasil akhir visualisasi peta penyebaran data spasial
 └── README.md
 ```
-##🚀 Workflows & Automation Scripts
+## 🚀 Workflows & Automation Scripts
 1. **Data Cleaning & File Management** 
 Proses perapian data dilakukan secara terprogram untuk menghindari kesalahan manusia (human error) pada 15.000 file data:
 
